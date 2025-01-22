@@ -1,0 +1,68 @@
+/* Reset styles */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* General body style */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Mobile menu styling */
+.mobile-menu {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+}
+
+.menu li {
+    border-bottom: 1px solid #555;
+}
+
+.menu li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+}
+
+/* Show menu on toggle */
+.menu.show {
+    display: flex;
+}
+
+/* Responsive behavior */
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none; /* Hide menu on larger screens */
+    }
+}
